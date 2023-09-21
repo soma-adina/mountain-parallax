@@ -1,0 +1,138 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(#2b1055,#7597de);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    color: bisque;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a{
+    text-decoration: none;
+    padding: 6px 10px;
+    color: bisque;
+}
+header ul li a:hover{
+    border-radius: 7px;
+    color: #2b1055;
+    background-color: bisque;
+
+}
+
+header .menu{
+    color: bisque;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 600;
+    display: none;
+}
+
+@media (max-width:800px){
+    header{
+        padding: 20px 30px;
+    }
+    header .active{
+    top: 100%;
+}
+    header ul{
+        position: absolute;
+        top:-1000%;
+        right: 0;
+        flex-direction: column;
+        background: #2b1055;
+        padding: 1rem 3rem;
+        z-index: 99;
+        
+    }
+
+    header ul li{
+        margin-bottom: 5px ;
+    }
+header .menu{
+    display: block;
+}
+
+}
+section{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section img#moon{
+    mix-blend-mode: screen;
+}
+#text{
+    position: absolute;
+    color: bisque;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 90;
+}
+section img#mountains_front{
+    z-index: 91;
+}
+
+.sec{
+    position: relative;
+    padding:100px;
+    background: #1c0522;                                                                                                                                            
+}
+.sec h2{
+    font-size: 3.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.sec p{
+    font-size: 1.1rem;
+    color: bisque;
+}
+

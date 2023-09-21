@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul class="menu-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <a href="#" class="menu">MENU</a>
+    </header>
+
+    <section>
+        <img src="stars.png" id="stars" alt="">
+        <img src="moon.png" id="moon" alt="">
+        <img src="mountains_behind.png" id="mountains_behind" alt="">
+        <h2 id="text">Moon Light</h2>
+        <img src="mountains_front.png" id="mountains_front" alt="">
+    </section>
+    <div class="sec">
+        <h2>Parallax Website</h2>
+        <p>
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Aliquid aspernatur labore 
+            praesentium, amet laborum non ullam, minima illo, placeat delectus 
+            assumenda consequatur voluptatem pariatur. Quos quia earum sunt 
+            dolores esse!
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Aliquid aspernatur labore 
+            praesentium, amet laborum non ullam, minima illo, placeat delectus 
+            assumenda consequatur voluptatem pariatur. Quos quia earum sunt 
+            dolores esse!
+            <br><br>
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Aliquid aspernatur labore 
+            praesentium, amet laborum non ullam, minima illo, placeat delectus 
+            assumenda consequatur voluptatem pariatur. Quos quia earum sunt 
+            dolores esse!
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Aliquid aspernatur labore 
+            praesentium, amet laborum non ullam, minima illo, placeat delectus 
+            assumenda consequatur voluptatem pariatur. Quos quia earum sunt 
+            dolores esse!
+            <br><br>
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Aliquid aspernatur labore 
+            praesentium, amet laborum non ullam, minima illo, placeat delectus 
+            assumenda consequatur voluptatem pariatur. Quos quia earum sunt 
+            dolores esse!
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Aliquid aspernatur labore 
+            praesentium, amet laborum non ullam, minima illo, placeat delectus 
+            assumenda consequatur voluptatem pariatur. Quos quia earum sunt 
+            dolores esse!
+            <br><br>
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Aliquid aspernatur labore 
+            praesentium, amet laborum non ullam, minima illo, placeat delectus 
+            assumenda consequatur voluptatem pariatur. Quos quia earum sunt 
+            dolores esse!
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Aliquid aspernatur labore 
+            praesentium, amet laborum non ullam, minima illo, placeat delectus 
+            assumenda consequatur voluptatem pariatur. Quos quia earum sunt 
+            dolores esse!
+            <br><br>
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Aliquid aspernatur labore 
+            praesentium, amet laborum non ullam, minima illo, placeat delectus 
+            assumenda consequatur voluptatem pariatur. Quos quia earum sunt 
+            dolores esse!
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Aliquid aspernatur labore 
+            praesentium, amet laborum non ullam, minima illo, placeat delectus 
+            assumenda consequatur voluptatem pariatur. Quos quia earum sunt 
+            dolores esse!
+            <br><br>
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Aliquid aspernatur labore 
+            praesentium, amet laborum non ullam, minima illo, placeat delectus 
+            assumenda consequatur voluptatem pariatur. Quos quia earum sunt 
+            dolores esse!
+            Lorem ipsum dolor sit, 
+            amet consectetur adipisicing elit. Aliquid aspernatur labore 
+            praesentium, amet laborum non ullam, minima illo, placeat delectus 
+            assumenda consequatur voluptatem pariatur. Quos quia earum sunt 
+            dolores esse!
+
+
+        </p>
+    </div>
+
+    <script>
+        let stars=document.getElementById('stars');
+        let moon=document.getElementById('moon');
+        let mountains_behind=document.getElementById('mountains_behind');
+        let mountains_front=document.getElementById('mountains_front');
+        let text=document.getElementById('text');
+        let menu=document.querySelector('.menu');
+        let menuItems=document.querySelector('.menu-items');
+
+        window.addEventListener('scroll', function(){
+            let value =window.scrollY;
+            stars.style.left=value *0.25 + 'px';
+            moon.style.top=value *1.05 + 'px';
+            mountains_behind.style.top=value *0.5+ 'px';
+            mountains_front.style.top=value *0 + 'px';
+            text.style.marginRight=value *4+ 'px';
+            text.style.marginTop=value *1.5+ 'px';
+        
+        });
+
+        menu.addEventListener("click", navToggle);
+
+        function navToggle(){
+            menuItems.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
